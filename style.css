@@ -1,0 +1,205 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body and background */
+body,
+html {
+  height: 100%;
+  background: url("./images/Night\ Sky.jpg") no-repeat;
+
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Login box */
+.form-box {
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
+
+  /* ✅ CLEAN GLASS LOOK (NO SHADOW) */
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-height: 650px;
+
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Input box */
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 15px 20px;
+  padding-left: 45px;
+
+  background: rgba(255, 255, 255, 0.08); /* smoother */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+
+  color: white;
+  outline: none;
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+/* ❌ REMOVED STRONG SHADOW */
+.input-box input:focus {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Eye toggle */
+.eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.eye:hover {
+  opacity: 1;
+}
+
+/* Labels */
+.input-box label {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+/* Remember me */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ddd;
+  font-size: 12px;
+}
+
+.remember input {
+  accent-color: white;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.footer span {
+  color: #ff4d6d;
+  font-weight: 500;
+}
+
+.footer:hover {
+  color: #fff;
+  opacity: 1;
+}
+h2 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}

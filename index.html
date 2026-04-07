@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="form-box">
+        <h2>Login</h2>
+
+        <div class="input-box">
+          <i class="fa-solid fa-envelope icon"></i>
+          <input type="email" required />
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" id="password" required />
+          <label>Password</label>
+          <i class="fa-solid fa-eye eye" onclick="togglePassword()"></i>
+        </div>
+
+        <div class="remember">
+          <input type="checkbox" id="r" />
+          <label for="r">Remember Me</label>
+        </div>
+
+        <button>Login</button>
+      </div>
+
+      <!-- Footer INSIDE wrapper -->
+      <div class="footer">
+        © 2026 Made with <span>❤</span> by Sharifullah Manali
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        const pass = document.getElementById("password");
+        const eye = document.querySelector(".eye");
+
+        if (pass.type === "password") {
+          pass.type = "text";
+          eye.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+          pass.type = "password";
+          eye.classList.replace("fa-eye-slash", "fa-eye");
+        }
+      }
+    </script>
+  </body>
+</html>
